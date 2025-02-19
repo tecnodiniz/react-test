@@ -3,13 +3,15 @@ import { Link, Outlet } from "react-router-dom";
 function Layout() {
   return (
     <>
-      <nav>Olá</nav>
-      <Link to="/">Home</Link>
-      <Link to="/about/1">About</Link>
+      <nav className="flex gap-4">
+        <Link to="/">Home</Link>
 
-      <main>
+        <Link to="/about/1">About</Link>
+      </nav>
+
+      <div className="grid">
         <Outlet />
-      </main>
+      </div>
     </>
   );
 }
